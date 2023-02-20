@@ -1,4 +1,11 @@
 
+*.Jenkinsfile
+
+docker-compose.yaml
+
+run.cmd
+
 Dockerfile
+
 
 README.md

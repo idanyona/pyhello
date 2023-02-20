@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  jenkins:
+    container_name: jenkins
+    image: jenkins/jenkins:lts-jdk11
+    privileged: true
+    user: root
+    group_add:
+    - '1000'
+    ports:
+    - 8080:8080
+    - 50000:50000
+    volumes:
+    - ./jenkins_configuration:/var/jenkins_home
+    - /var/run/docker.sock:/var/run/docker.sock
+    - /usr/local/bin/docker:/usr/bin/docker
